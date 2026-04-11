@@ -21,8 +21,19 @@ IP Protocol: TCP
 Source Port Range: All
 Destination Port Range: 19999
 Allows: TCP traffic for port 19999
+
 ### Alerting in Netdata
 https://learn.netdata.cloud/docs/alerts-&-notifications
 Custom alerts need to be stored in /etc/netdata/health.d
 1. Open notification config 
-sudo ./edit-config health_alarm_notify.conf
+`sudo ./edit-config health_alarm_notify.conf`
+and set up email address for receiving the alerts
+2. Create alerts according to your requirements (examples can be found in alerts folder of this repository)
+3. Disable some default alerts (if needed, to avoid duplicates) with file in directory /etc/netdata/health.d
+4. Reload alerts and configuration with `sudo netdatacli reload-health` command 
+
+### Dashboard setup
+https://learn.netdata.cloud/docs/dashboards-and-charts/tabs/dashboards
+Open  http://localhost:19999/ or http://{your-server-ip}:19999/ 
+1. Sign in and create an account
+2. Generate bearer token to confirm an access `sudo cat /var/lib/netdata/netdata_random_session_id` 
