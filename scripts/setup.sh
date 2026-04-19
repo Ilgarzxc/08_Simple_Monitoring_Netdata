@@ -4,9 +4,9 @@ LOGFILE=/var/log/netdata.log
 
 sudo apt update
 # Simple check for learning purposes (not production-safe)
-NETDATA_INSTALLED=$(netdata -v | grep "netdata")
-UFW_INSTALLED=$(ufw --version | grep "ufw")
-UFW_IS_INACTIVE=$(sudo ufw status | grep "Status: inactive")
+NETDATA_INSTALLED=$(netdata -v 2>&1 | grep "netdata")
+UFW_INSTALLED=$(ufw --version 2>&1 | grep "ufw")
+UFW_IS_INACTIVE=$(sudo ufw status 2>&1 | grep "Status: inactive")
 
 if [ -z "$NETDATA_INSTALLED" ]; then
     sudo apt install netdata -y

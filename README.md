@@ -103,6 +103,3 @@ Open  http://localhost:19999/ or http://{your-server-ip}:19999/
 1. Sign in and create an account
 2. Generate bearer token to confirm an access `sudo cat /var/lib/netdata/netdata_random_session_id` 
 3. Now you can change dashboard settings and work with UI with the relevant access rights.
-
-## Room for improvement
-- add alerting via email

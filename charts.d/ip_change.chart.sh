@@ -26,7 +26,7 @@ ip_change_check() {
 ip_change_create() {
     cat <<EOF
 CHART ip_change.ip '' 'Public IP Change' 'exit code' ip_change ip line 60000 1
-DIMENSION exit exit absolute 1 300
+DIMENSION exit exit absolute 1 1
 EOF
 }
 
