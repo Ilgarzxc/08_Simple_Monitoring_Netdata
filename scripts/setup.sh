@@ -3,7 +3,7 @@
 LOGFILE=/var/log/netdata.log
 
 sudo apt update
-
+# Simple check for learning purposes (not production-safe)
 NETDATA_INSTALLED=$(netdata -v | grep "netdata")
 UFW_INSTALLED=$(ufw --version | grep "ufw")
 UFW_IS_INACTIVE=$(sudo ufw status | grep "Status: inactive")
