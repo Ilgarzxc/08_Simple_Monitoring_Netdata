@@ -19,7 +19,7 @@ if [ "$IP_ADDRESS" = "$SAVED_IP" ]; then
 	exit 0
 else
 	echo $IP_ADDRESS | sudo tee /var/log/my_public_ip.log
-	exit 2
+	exit 1
 fi 
 
 
